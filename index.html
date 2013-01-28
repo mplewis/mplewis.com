@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- jQuery latest -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/0.11.4/jquery.timeago.js"></script>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>Matthew P.V. Lewis</title>
+	<meta name="description" content="I'm a computer engineering student at the University of Minnesota, Twin Cities. I love coding, web development, and science fiction.">
+	<meta name="author" content="Matthew Lewis">
+
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+	<!-- Google Web Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Marcellus' rel='stylesheet' type='text/css'>
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+</head>
+<body>
+
+	<div class="container shadow-sides bkg-lighter">
+		<div class="sixteen columns">
+			<h1 class="remove-bottom centered" style="margin-top: 40px">
+				Matthew P.V. Lewis
+			</h1>
+			<hr />
+		</div>
+		<div class="one-third column">
+			<h3>About Me</h3>
+		</div>
+		<div class="two-thirds column">
+			<p class="indented justified">
+				I'm a junior at the University of Minnesota studying computer engineering. I love coding, graphic design, web development, and science fiction. I enjoy projects that involve human interaction with the internet via physical objects, and I especially like working with microcontrollers.
+			</p>
+		</div>
+		<div class="clear"></div>
+		<div class="one-third column">
+			<h3>Résumé</h3>
+		</div>
+		<div class="two-thirds column">
+			<p class="justified">
+				My <a href="resume.pdf">résumé (PDF)</a> is available for download.<br />Please don't hesitate to contact me with any questions via <a href="mailto:matt@mplewis.com">email</a>.
+			</p>
+		</div>
+		<div class="clear"></div>
+		<div class="one-third column">
+			<h3>Projects and Code</h3>
+		</div>
+		<div class="two-thirds column">
+			<p class="justified">
+				My projects can be found at my <a href="blog/">Wordpress blog</a>.<br />
+				My public code repositories can be found on <a href="http://mplewis.github.com/">my GitHub page</a>.<br />
+				<a href="blog/"><img src="images/social/wordpress.png" alt="" /></a>
+				<a href="http://mplewis.github.com/"><img src="images/social/github.png" alt="" /></a>
+			</p>
+		</div>
+		<div class="clear"></div>
+		<div class="one-third column">
+			<h3>Contact Me</h3>
+		</div>
+		<div class="two-thirds column">
+			I can be most easily reached by any of the following:<br />
+			<a href="http://www.facebook.com/vimatt" target="_blank"><img src="images/social/facebook.png" alt="Facebook"></a>
+			<a href="https://plus.google.com/110820119482115492871/" target="_blank"><img src="images/social/google.png" alt="Google+"></a>
+			<a href="http://www.linkedin.com/profile/view?id=88574533" target="_blank"><img src="images/social/linkedin.png" alt="LinkedIn"></a>
+			<a href="mailto:matt@mplewis.com" target="_blank"><img src="images/social/email.png" alt="Email"></a>
+		</div>
+		<div class="clear"></div>
+		<div class="one-third column">
+			<h3><a href="http://last.fm/user/trickybeta/"><img src="images/social/last.fm.png" alt="" /></a> Music</h3>
+		</div>
+		<div class="two-thirds column">
+			<p class="justified">Here's what I've been listening to lately:</p>
+			<p class="justified">
+				<ul id="music"></ul>
+			</p>
+		</div>
+
+		<script>
+
+var maxTracks = 5;
+var lastUsername = "trickybeta";
+var apiKey = "5c14ae46a8579d7c453edf696ce5efed"
+
+$.getJSON("http://ws.audioscrobbler.com/2.0/",
+	{
+		method: "user.getrecenttracks",
+		user: lastUsername,
+		api_key: apiKey,
+		format: "json",
+		limit: String(maxTracks)
+	},
+	function(data) {
+		var tracks = data["recenttracks"]["track"]
+		for (var i = 0; i < tracks.length; i++) {
+			var track = tracks[i];
+			console.log(track);
+
+			var artist = track["artist"]["#text"];
+			var artistMbid = track["artist"]["mbid"];
+			var trackTitle = track["name"];
+			var trackUrl = track["url"];
+			
+			var timeAgo = "Listening now!";
+			if ("date" in track) {
+				var time = track["date"]["uts"];
+				var timeObj = new Date(time * 1000);
+				console.log(timeObj);
+				timeAgo = jQuery.timeago(timeObj);
+			}
+
+			$('#music').append('<li class="track"><span class="musicbullet">♪</span> <span class="artist">' + artist + '</span> - <a href="' + trackUrl + '" class="tracktitle">' + trackTitle + '</a><br /><span class="timeago">' + timeAgo + "</span></li>");
+		}
+	}
+);
+
+		</script>
+
+		<div class="clear"></div>
+	</div><!-- container -->
+
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

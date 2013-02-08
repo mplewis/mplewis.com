@@ -7,6 +7,7 @@
 
 	<!-- jQuery latest -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/0.11.4/jquery.timeago.js"></script>
 
 	<!-- Basic Page Needs
@@ -76,6 +77,17 @@
 		</div>
 		<div class="clear"></div>
 		<div class="one-third column">
+			<h3>Project Blog</h3>
+		</div>
+		<div class="two-thirds column">
+			<p class="justified">
+				Read up on my projects at my <a href="octopress/">Octopress blog</a>.<br/>
+				Most recent post:<br />
+				<span class="blog-data" style="padding-left: 30px;"><em>Loading...</em></span>
+			</p>
+		</div>
+		<div class="clear"></div>
+		<div class="one-third column">
 			<h3>Contact Me</h3>
 		</div>
 		<div class="two-thirds column">
@@ -95,50 +107,51 @@
 				<ul id="music"></ul>
 			</p>
 		</div>
-
-		<script>
-
-var maxTracks = 5;
-var lastUsername = "trickybeta";
-var apiKey = "5c14ae46a8579d7c453edf696ce5efed"
-
-$.getJSON("http://ws.audioscrobbler.com/2.0/",
-	{
-		method: "user.getrecenttracks",
-		user: lastUsername,
-		api_key: apiKey,
-		format: "json",
-		limit: String(maxTracks)
-	},
-	function(data) {
-		var tracks = data["recenttracks"]["track"]
-		for (var i = 0; i < tracks.length; i++) {
-			var track = tracks[i];
-			console.log(track);
-
-			var artist = track["artist"]["#text"];
-			var artistMbid = track["artist"]["mbid"];
-			var trackTitle = track["name"];
-			var trackUrl = track["url"];
-			
-			var timeAgo = "Listening now!";
-			if ("date" in track) {
-				var time = track["date"]["uts"];
-				var timeObj = new Date(time * 1000);
-				console.log(timeObj);
-				timeAgo = jQuery.timeago(timeObj);
-			}
-
-			$('#music').append('<li class="track"><span class="musicbullet">♪</span> <span class="artist">' + artist + '</span> - <a href="' + trackUrl + '" class="tracktitle">' + trackTitle + '</a><br /><span class="timeago">' + timeAgo + "</span></li>");
-		}
-	}
-);
-
-		</script>
-
 		<div class="clear"></div>
 	</div><!-- container -->
 
+	<script>
+
+		var maxTracks = 5;
+		var lastUsername = "trickybeta";
+		var apiKey = "5c14ae46a8579d7c453edf696ce5efed"
+
+		$.getJSON("http://ws.audioscrobbler.com/2.0/",
+			{
+				method: "user.getrecenttracks",
+				user: lastUsername,
+				api_key: apiKey,
+				format: "json",
+				limit: String(maxTracks)
+			},
+			function(data) {
+				var tracks = data["recenttracks"]["track"]
+				for (var i = 0; i < tracks.length; i++) {
+					var track = tracks[i];
+					console.log(track);
+
+					var artist = track["artist"]["#text"];
+					var artistMbid = track["artist"]["mbid"];
+					var trackTitle = track["name"];
+					var trackUrl = track["url"];
+					
+					var timeAgo = "Listening now!";
+					if ("date" in track) {
+						var time = track["date"]["uts"];
+						var timeObj = new Date(time * 1000);
+						console.log(timeObj);
+						timeAgo = jQuery.timeago(timeObj);
+					}
+
+					$('#music').append('<li class="track"><span class="musicbullet">♪</span> <span class="artist">' + artist + '</span> - <a href="' + trackUrl + '" class="tracktitle">' + trackTitle + '</a><br /><span class="timeago">' + timeAgo + "</span></li>");
+				}
+			}
+		);
+
+	</script>
+
+	<script src="js/parse-json-feed.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=1&q=http://www.mplewis.com/octopress/atom.xml&alt=json-in-script&callback=parseFeed"></script>
 
 <!-- End Document
 ================================================== -->

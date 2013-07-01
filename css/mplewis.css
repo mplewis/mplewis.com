@@ -1,0 +1,36 @@
+body {
+    width: 700px;
+    margin: 40px auto;
+    font-family: 'District Pro', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 135%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'District Pro', sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h1, h2, p {
+    margin-bottom: 24px;
+}
+
+hr {
+    border: 0;
+    background: url("/images/flourish.png") 0 0 no-repeat;
+    background-size: 350px 25px;
+    width: 350px;
+    height: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+}

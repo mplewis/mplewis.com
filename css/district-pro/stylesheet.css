@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'District Pro';
+    src: url('distproth.eot');
+    src: url('distproth.eot') format('embedded-opentype'),
+         url('distproth.woff') format('woff'),
+         url('distproth.ttf') format('truetype'),
+         url('distproth.svg#DistrictProThin') format('svg');
+}

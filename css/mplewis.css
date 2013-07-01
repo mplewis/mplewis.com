@@ -52,3 +52,19 @@ a {
 #latitude+p {
     margin-top: -32px;
 }
+
+hr, h1, h2, p {
+    -webkit-transition: 1s all ease-in;
+    -moz-transition: 1s all ease-in;
+    -o-transition: 1s all ease-in;
+    transition: 1s all ease-in;
+}
+
+.blur {
+    opacity: 0;
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
+}

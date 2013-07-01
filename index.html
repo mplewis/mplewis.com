@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/district-pro/stylesheet.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.9/jquery.transit.min.js"></script>
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -33,45 +34,45 @@
 </head>
 <body>
 
-    <h1>Matthew P.V. Lewis</h1>
+    <h1 class="blur">Matthew P.V. Lewis</h1>
 
-    <hr />
+    <hr class="blur"/>
 
-    <h2>About Me</h2>
+    <h2 class="blur">About Me</h2>
 
-    <p>I'm a senior studying computer engineering<br />at the University of Minnesota Twin Cities.</p>
+    <p class="blur">I'm a senior studying computer engineering<br />at the University of Minnesota Twin Cities.</p>
 
-    <p>My favorite projects fuse hardware with software.</p>
+    <p class="blur">My favorite projects fuse hardware with software.</p>
 
-    <p>I'm passionate about graphic design, music,<br />and human-focused development.</p>
+    <p class="blur">I'm passionate about graphic design, music,<br />and human-focused development.</p>
 
-    <hr />
+    <hr class="blur"/>
 
-    <h2>My Works</h2>
+    <h2 class="blur">My Works</h2>
 
-    <p><a href="/octopress">Read my project blog.</a></p>
+    <p class="blur"><a href="/octopress">Read my project blog.</a></p>
 
-    <p><a href="http://www.github.com/mplewis">View my code on GitHub.</a></p>
+    <p class="blur"><a href="http://www.github.com/mplewis">View my code on GitHub.</a></p>
 
-    <hr />
+    <hr class="blur"/>
 
-    <h2>Myself</h2>
+    <h2 class="blur">Myself</h2>
 
-    <p><a href="javascript:;" id="latitude-link">Find out where I am.</a></p>
+    <p class="blur"><a href="javascript:;" id="latitude-link">Find out where I am.</a></p>
 
     <iframe id="latitude" src="http://latitude.google.com/latitude/apps/badge/api?user=6143439630895179517&type=iframe&maptype=roadmap" width="600" height="450" frameborder="0"></iframe>
 
-    <p><a href="http://www.last.fm/user/trickybeta">See what I've been listening to.</a></p>
+    <p class="blur"><a href="http://www.last.fm/user/trickybeta">See what I've been listening to.</a></p>
 
-    <hr />
+    <hr class="blur"/>
 
-    <h2>Contact Me</h2>
+    <h2 class="blur">Contact Me</h2>
 
-    <p>I'm usually online in one form or another.</p>
+    <p class="blur">I'm usually online in one form or another.</p>
 
-    <p><a href="http://www.twitter.com/kesdev">Send me a short message on Twitter.</a></p>
+    <p class="blur"><a href="http://www.twitter.com/kesdev">Send me a short message on Twitter.</a></p>
 
-    <p><a href="mailto:matt@mplewis.com">Send me a long message via email.</a></p>
+    <p class="blur"><a href="mailto:matt@mplewis.com">Send me a long message via email.</a></p>
 
     <script>
         var latitudeVisible = false;
@@ -100,6 +101,21 @@
             }
             latitudeVisible = !latitudeVisible;
         });
+
+        $(function() {
+            setTimeout(function() {
+                $('h1').removeClass('blur');
+            }, 0);
+            setTimeout(function() {
+                $('hr').removeClass('blur');
+            }, 400);
+            setTimeout(function() {
+                $('h2').removeClass('blur');
+            }, 600);
+            setTimeout(function() {
+                $('p').removeClass('blur');
+            }, 800);
+        })
     </script>
 
 </body>

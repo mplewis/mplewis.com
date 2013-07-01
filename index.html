@@ -12,9 +12,23 @@
     <link rel="stylesheet" href="/css/mplewis.css">
     <link rel="stylesheet" href="/css/district-pro/stylesheet.css">
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <!--
+                        _                                                         _ 
+                       ( )                                                       | |
+      _   _  ___  _   _|/ _ __ ___    __ ___      _____  ___  ___  _ __ ___   ___| |
+     | | | |/ _ \| | | | | '__/ _ \  / _` \ \ /\ / / _ \/ __|/ _ \| '_ ` _ \ / _ \ |
+     | |_| | (_) | |_| | | | |  __/ | (_| |\ V  V /  __/\__ \ (_) | | | | | |  __/_|
+      \__, |\___/ \__,_| |_|  \___|  \__,_| \_/\_/ \___||___/\___/|_| |_| |_|\___(_)
+       __/ |                                                                        
+      |___/                                                                         
+
+    -->
 
 </head>
 <body>
@@ -35,17 +49,19 @@
 
     <h2>My Works</h2>
 
-    <p>Read my project blog.</p>
+    <p><a href="/octopress">Read my project blog.</a></p>
 
-    <p>View my code on GitHub.</p>
+    <p><a href="http://www.github.com/mplewis">View my code on GitHub.</a></p>
 
     <hr />
 
     <h2>Myself</h2>
 
-    <p>Find out where I am.</p>
+    <p><a href="javascript:;" id="latitude-link">Find out where I am.</a></p>
 
-    <p>See what I've been listening to.</p>
+    <iframe id="latitude" src="http://latitude.google.com/latitude/apps/badge/api?user=6143439630895179517&type=iframe&maptype=roadmap" width="600" height="450" frameborder="0"></iframe>
+
+    <p><a href="http://www.last.fm/user/trickybeta">See what I've been listening to.</a></p>
 
     <hr />
 
@@ -53,9 +69,38 @@
 
     <p>I'm usually online in one form or another.</p>
 
-    <p>Send me a short message on Twitter.</p>
+    <p><a href="http://www.twitter.com/kesdev">Send me a short message on Twitter.</a></p>
 
-    <p>Send me a long message via email.</p>
+    <p><a href="mailto:matt@mplewis.com">Send me a long message via email.</a></p>
+
+    <script>
+        var latitudeVisible = false;
+        $('#latitude-link').on('click', function() {
+            if (!latitudeVisible) {
+                $('#latitude+p').animate({
+                    "margin-top": 0
+                });
+                $('#latitude').animate({
+                    height: "450px"
+                });
+                $('#latitude').animate({
+                    opacity: 1
+                });
+            } else {
+                $('#latitude').animate({
+                    opacity: 0
+                }, function() {
+                    $('#latitude+p').animate({
+                        "margin-top": "-32px"
+                    });
+                });
+                $('#latitude').animate({
+                    height: 0
+                });
+            }
+            latitudeVisible = !latitudeVisible;
+        });
+    </script>
 
 </body>
 </html>

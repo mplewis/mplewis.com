@@ -3,6 +3,8 @@ body {
     margin: 40px auto;
     font-family: 'District Pro', sans-serif;
     font-size: 1.5em;
+    color: #333;
+    font-smoothing: antialiased;
     text-align: center;
     line-height: 135%;
 }
@@ -10,6 +12,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'District Pro', sans-serif;
     font-weight: normal;
+    color: #000;
 }
 
 h1 {
@@ -33,4 +36,19 @@ hr {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 10px;
+}
+
+a {
+    color: #368;
+    text-decoration: none;
+}
+
+#latitude {
+    opacity: 0; 
+    height: 0;
+    overflow: hidden;
+}
+
+#latitude+p {
+    margin-top: -32px;
 }

@@ -57,11 +57,11 @@ a {
     margin-top: -32px;
 }
 
-hr, h1, h2, p {
-    -webkit-transition: 1s all ease-in;
-    -moz-transition: 1s all ease-in;
-    -o-transition: 1s all ease-in;
-    transition: 1s all ease-in;
+hr, h1, h2, p, #latitude {
+    -webkit-transition: 1s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -moz-transition: 1s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -o-transition: 1s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: 1s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .blur {

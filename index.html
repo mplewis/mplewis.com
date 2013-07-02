@@ -60,7 +60,7 @@
 
     <p class="blur"><a href="javascript:;" id="latitude-link">Find out where I am.</a></p>
 
-    <iframe id="latitude" src="http://latitude.google.com/latitude/apps/badge/api?user=6143439630895179517&type=iframe&maptype=roadmap" width="600" height="450" frameborder="0"></iframe>
+    <iframe id="latitude" class="blur" src="http://latitude.google.com/latitude/apps/badge/api?user=6143439630895179517&type=iframe&maptype=roadmap" width="600" height="450" frameborder="0"></iframe>
 
     <p class="blur"><a href="http://www.last.fm/user/trickybeta">See what I've been listening to.</a></p>
 
@@ -78,26 +78,12 @@
         var latitudeVisible = false;
         $('#latitude-link').on('click', function() {
             if (!latitudeVisible) {
-                $('#latitude+p').animate({
-                    "margin-top": 0
-                });
-                $('#latitude').animate({
-                    height: "450px"
-                });
-                $('#latitude').animate({
-                    opacity: 1
-                });
+                $('#latitude').addClass('taller');
+                setTimeout(function() {$('#latitude').removeClass('blur');}, 1000);
+                
             } else {
-                $('#latitude').animate({
-                    opacity: 0
-                }, function() {
-                    $('#latitude+p').animate({
-                        "margin-top": "-32px"
-                    });
-                });
-                $('#latitude').animate({
-                    height: 0
-                });
+                $('#latitude').addClass('blur');
+                setTimeout(function() {$('#latitude').removeClass('taller')}, 1000);
             }
             latitudeVisible = !latitudeVisible;
         });

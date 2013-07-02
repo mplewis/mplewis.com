@@ -44,9 +44,13 @@ a {
 }
 
 #latitude {
-    opacity: 0; 
     height: 0;
+    padding-bottom: 32px;
     overflow: hidden;
+}
+
+.taller {
+    height: 450px !important;
 }
 
 #latitude+p {

@@ -9,6 +9,10 @@ body {
     line-height: 135%;
 }
 
+.avatar {
+    border-radius: 100px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'District Pro', sans-serif;
     font-weight: normal;
@@ -57,7 +61,7 @@ a {
     margin-top: -32px;
 }
 
-hr, h1, h2, p, #latitude {
+hr, img, h1, h2, p, #latitude {
     -webkit-transition: 1s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
     -moz-transition: 1s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
     -o-transition: 1s all cubic-bezier(0.445, 0.05, 0.55, 0.95);

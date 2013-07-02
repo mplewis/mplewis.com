@@ -36,6 +36,8 @@
 
     <h1 class="blur">Matthew P.V. Lewis</h1>
 
+    <img src="http://www.gravatar.com/avatar/1beb46acb5d3842ed79d2448721b951c?s=400" alt="" class="avatar blur" width="200" height="200" />
+
     <hr class="blur"/>
 
     <h2 class="blur">About Me</h2>
@@ -93,14 +95,17 @@
                 $('h1').removeClass('blur');
             }, 0);
             setTimeout(function() {
-                $('hr').removeClass('blur');
+                $('img').removeClass('blur');
             }, 400);
             setTimeout(function() {
+                $('hr').removeClass('blur');
+            }, 700);
+            setTimeout(function() {
                 $('h2').removeClass('blur');
-            }, 600);
+            }, 900);
             setTimeout(function() {
                 $('p').removeClass('blur');
-            }, 800);
+            }, 1050);
         })
     </script>
 

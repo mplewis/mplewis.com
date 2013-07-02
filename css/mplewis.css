@@ -49,12 +49,12 @@ a {
 
 #latitude {
     height: 0;
-    padding-bottom: 32px;
     overflow: hidden;
 }
 
 .taller {
     height: 450px !important;
+    margin-bottom: 32px;
 }
 
 #latitude+p {

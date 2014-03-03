@@ -62,10 +62,6 @@
 
     <h2 class="blur">Myself</h2>
 
-    <p class="blur"><a href="javascript:;" id="latitude-link">Find out where I am.</a></p>
-
-    <iframe id="latitude" class="blur" src="http://latitude.google.com/latitude/apps/badge/api?user=6143439630895179517&type=iframe&maptype=roadmap" width="600" height="450" frameborder="0"></iframe>
-
     <p class="blur"><a href="http://www.last.fm/user/trickybeta">See what I've been listening to.</a></p>
 
     <hr class="blur"/>
@@ -89,21 +85,6 @@
     <p class="blur">Dogecoin: D5FY5h4DMFWeqi8SFEAfrv5xKXuNrBWkCu</p>
 
     <script>
-        var latitudeVisible = false;
-        $('#latitude-link').on('click', function() {
-            if (!latitudeVisible) {
-                $('#latitude').addClass('taller');
-                setTimeout(function() {
-                    $.scrollTo('#latitude-link', 1000, {easing: 'easeOutQuart', offset: -20});
-                    $('#latitude').removeClass('blur');
-                }, 1000);
-            } else {
-                $('#latitude').addClass('blur');
-                setTimeout(function() {$('#latitude').removeClass('taller')}, 1000);
-            }
-            latitudeVisible = !latitudeVisible;
-        });
-
         $(function() {
             setTimeout(function() {
                 $('h1').removeClass('blur');

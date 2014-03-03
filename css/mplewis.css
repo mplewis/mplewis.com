@@ -1,9 +1,9 @@
 body {
     width: 600px;
     margin: 20px auto;
-    font-family: 'District Pro', sans-serif;
     font-size: 1.5em;
     color: #333;
+    font-weight: lighter;
     font-smoothing: antialiased;
     text-align: center;
     line-height: 135%;
@@ -14,8 +14,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'District Pro', sans-serif;
-    font-weight: normal;
     color: #000;
 }
 

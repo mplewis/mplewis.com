@@ -73,3 +73,7 @@ hr, img, h1, h2, p, #latitude {
     -ms-filter: blur(20px);
     filter: blur(20px);
 }
+
+iframe#coinbase_button_iframe_2048e89e28f89aa8aae58560c6289c1b {
+    width: 210px !important;
+}

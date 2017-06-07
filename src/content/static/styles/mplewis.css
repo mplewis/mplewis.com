@@ -3,8 +3,8 @@ body {
   color: rgb(51, 51, 51);
 }
 
-a.no-line {
-  background: none;
+.sidenote {
+  margin-bottom: 0.55rem;
 }
 
 @media (min-width: 761px) {

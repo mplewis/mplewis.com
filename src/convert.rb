@@ -81,7 +81,5 @@ index_html = render_index tufte_md_to_html
 if ARGV.empty?
   puts index_html
 else
-  puts Dir.pwd
-  puts ARGV.first
   File.open(ARGV.first, 'w') { |f| f.write(index_html) }
 end

@@ -10,7 +10,7 @@ Before that, ✂ I was a product developer at [Punch Through](https://punchthrou
 
 I adore planes ✂ and aspire to get my private pilot's license. I enjoy motorcycling with friends around twisty back roads{moto}. When the weather is nice, I love camping, canoeing{bwca}, and mountain biking. Other interests of mine include science fiction, blinky lights, and open-source software{foss}.
 
-My résumé is [available here (PDF)](resume.pdf). Please feel free to contact me via email at [matt@mplewis.com](mailto:matt@mplewis.com).
+My résumé ✂ is [available here (PDF)](resume.pdf). Please feel free to contact me via email at [matt@mplewis.com](mailto:matt@mplewis.com).
 
 {umn}: Go Gophers!
 {gusto}: [![Gusto](images/gusto_logo.png)](https://gusto.com)

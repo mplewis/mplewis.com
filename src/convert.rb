@@ -73,8 +73,15 @@ def tufte_md_to_html
   render_md processed
 end
 
-def render(html_body)
+def render_index(html_body)
   template_from(TEMPLATE_SLIM).render { html_body }
 end
 
-puts render(tufte_md_to_html)
+index_html = render_index tufte_md_to_html
+if ARGV.empty?
+  puts index_html
+else
+  puts Dir.pwd
+  puts ARGV.first
+  File.open(ARGV.first, 'w') { |f| f.write(index_html) }
+end

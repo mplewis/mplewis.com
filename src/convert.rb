@@ -4,8 +4,9 @@ require 'tilt'
 require 'slim'
 require 'redcarpet'
 
-INDEX_PATH = 'content/index.tufte.md'
-TEMPLATE_PATH = 'content/template.slim'
+INDEX_TUFTE_MD = 'content/index.tufte.md'
+TEMPLATE_SLIM = 'content/template.slim'
+SIDENOTE_SLIM = 'content/sidenote.slim'
 
 def file_at(path)
   File.join File.dirname(__FILE__), path
@@ -19,31 +20,45 @@ def template_from(path)
   Tilt.new file_at path
 end
 
-def split_footnotes(txt)
+def split_sidenotes(txt)
   re = /^\[(\d+)\]: (.+)/
   body = []
-  footnotes = {}
+  sidenotes = {}
   txt.split(/\n/).each do |line|
     match = re.match line
     body << line and next unless match
-    footnotes[match[1]] = match[2]
+    sidenotes[match[1]] = match[2]
   end
-  [body.join("\n"), footnotes]
+  [body.join("\n"), sidenotes]
 end
 
-def inject_footnotes(body, footnotes)
-  footnotes.each do |key, content|
-    body.gsub!(/\[#{key}\]/, "<span class=\"sidenote\">#{content}</span>")
+def inject_sidenotes(body, sidenotes)
+  template = template_from SIDENOTE_SLIM
+  sidenotes.each do |key, content|
+    body.gsub!(/\[#{key}\]/, template.render(nil, key: key, content: content))
   end
   body
 end
 
-def add_footnotes(raw)
-  inject_footnotes(*split_footnotes(raw))
+def add_sidenotes(raw)
+  inject_sidenotes(*split_sidenotes(raw))
+end
+
+def add_newthoughts(raw)
+  processed = raw.split(/\n/).map do |line|
+    match = /^(.+)✂(.+)/.match line
+    if match
+      "<span class=\"newthought\">#{match[1].rstrip}</span>#{match[2]}"
+    else
+      line
+    end
+  end
+  processed.join "\n"
 end
 
 def process_tufte(raw)
-  add_footnotes raw
+  with_sidenotes = add_sidenotes raw
+  add_newthoughts with_sidenotes
 end
 
 def render_md(source)
@@ -51,13 +66,13 @@ def render_md(source)
 end
 
 def tufte_md_to_html
-  raw = read_file_at INDEX_PATH
+  raw = read_file_at INDEX_TUFTE_MD
   processed = process_tufte raw
   render_md processed
 end
 
 def render(html_body)
-  template_from(TEMPLATE_PATH).render { html_body }
+  template_from(TEMPLATE_SLIM).render { html_body }
 end
 
 puts render(tufte_md_to_html)

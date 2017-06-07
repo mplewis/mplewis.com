@@ -8,6 +8,9 @@ INDEX_TUFTE_MD = 'content/index.tufte.md'
 TEMPLATE_SLIM = 'content/template.slim'
 SIDENOTE_SLIM = 'content/sidenote.slim'
 
+SIDENOTE_DST_RE = -> (key) { /{#{key}}/ }
+SIDENOTE_SRC_RE = /^{([A-z0-9]+)}: (.+)/
+
 def file_at(path)
   File.join File.dirname(__FILE__), path
 end
@@ -21,11 +24,10 @@ def template_from(path)
 end
 
 def split_sidenotes(txt)
-  re = /^\[(\d+)\]: (.+)/
   body = []
   sidenotes = {}
   txt.split(/\n/).each do |line|
-    match = re.match line
+    match = SIDENOTE_SRC_RE.match line
     body << line and next unless match
     sidenotes[match[1]] = match[2]
   end
@@ -35,7 +37,7 @@ end
 def inject_sidenotes(body, sidenotes)
   template = template_from SIDENOTE_SLIM
   sidenotes.each do |key, content|
-    body.gsub!(/\[#{key}\]/, template.render(nil, key: key, content: content))
+    body.gsub!(SIDENOTE_DST_RE.call(key), template.render(nil, key: key, content: content))
   end
   body
 end

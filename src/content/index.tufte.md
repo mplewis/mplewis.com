@@ -8,7 +8,7 @@ I formerly worked ✂ as a technical project manager at [Rachio](https://rachio.
 
 Before that, ✂ I was a product developer at [Punch Through](https://punchthrough.com) in Minneapolis. My work there focused on our development board for makers, the LightBlue Bean. I led development on our iOS and Android apps. I built the Bean Cloud Compiler{bcc} to compile Arduino sketches for our mobile apps. I also managed and maintained our website and store.
 
-I adore planes ✂ and aspire to get my private pilot's license. I enjoy motorcycling with friends around twisty back roads{moto}. When the weather is nice, I love camping, canoeing{bwca}, and mountain biking. Other interests of mine include science fiction, blinky lights, and open-source software{foss}.
+I adore planes ✂ and aspire to get my private pilot's license. I enjoy motorcycling with friends around twisty back roads{moto}. When the weather is nice, I love camping, canoeing{bwca}, and mountain biking. Other interests of mine include science fiction, blinky lights, and open-source software{foss}. I occasionally [talk about software](/talks/fdse).
 
 My résumé ✂ is [available here (PDF)](resume.pdf). Please feel free to contact me via email at [matt@mplewis.com](mailto:matt@mplewis.com).
 

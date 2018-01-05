@@ -4,11 +4,17 @@ I grew up ✂ in Wausau, Wisconsin. After high school, I attended the University
 
 I currently live ✂ in Denver, CO and work at [Gusto](https://gusto.com) as a full-stack software engineer. We build payroll, HR, and benefits software for small businesses. My work is in Rails and React{js} and focuses on our core payroll product.
 
-I formerly worked ✂ as a technical project manager at [Rachio](https://rachio.com) in Denver. My work focused on deploying BDD test automation for production apps, designing product experiences, facilitating user research, and managing tooling to support internal teams.
+# I create stuff.
 
-Before that, ✂ I was a product developer at [Punch Through](https://punchthrough.com) in Minneapolis. My work there focused on our development board for makers, the LightBlue Bean. I led development on our iOS and Android apps. I built the Bean Cloud Compiler{bcc} to compile Arduino sketches for our mobile apps. I also managed and maintained our website and store.
+* [Frontend Doesn't Suck Anymore](/talks/fdse): It's 2017 and the web is fun again. Learn how to move out of the backend and 
+* [src2png](https://github.com/mplewis/src2png): Create beautiful, syntax-highlighted, high-resolution PNGs from your snippets of code. Great for your next software talk.
+* [whyvote.us](http://whyvote.us): Find out how much impact your presidential election vote really makes.
+* [csvtomd](https://github.com/mplewis/csvtomd): Convert your CSV files to Markdown in the terminal.
+* [Boundary Waters 2015](bwca_2015): Photo gallery from my trip to the Boundary Waters Canoe Area in Ely, MN in 2015. I built a [static site generator](https://github.com/mplewis/expose.py) for this project.
 
-I adore planes ✂ and aspire to get my private pilot's license. I enjoy motorcycling with friends around twisty back roads{moto}. When the weather is nice, I love camping, canoeing{bwca}, and mountain biking. Other interests of mine include science fiction, blinky lights, and open-source software{foss}. I occasionally [talk about software](/talks/fdse).
+# I do stuff.
+
+I adore planes ✂ and aspire to get my private pilot's license. I enjoy motorcycling with friends around twisty back roads{moto}. When the weather is nice, I love camping, canoeing, and mountain biking. Other interests of mine include science fiction, blinky lights, and open-source software{foss}. I occasionally [talk about software](/talks/fdse).
 
 My résumé ✂ is [available here (PDF)](resume.pdf). Please feel free to contact me via email at [matt@mplewis.com](mailto:matt@mplewis.com).
 
@@ -16,5 +22,4 @@ My résumé ✂ is [available here (PDF)](resume.pdf). Please feel free to conta
 {js}: There's a lot of modern JS and a little Backbone, too.
 {bcc}: As a proprietary web service, the Cloud Compiler doesn't have a website. Sorry.
 {moto}: I currently ride a [2014 Triumph Street Triple](http://www.triumphmotorcycles.com/bikes/roadsters-and-supersports/street/2016/street-triple-abs).
-{bwca}: [See my last trip to the Boundary Waters.](bwca_2015)
-{foss}: I built [WhyVote.us](http://whyvote.us) and [csvtomd](https://github.com/mplewis/csvtomd). Find more at my [GitHub profile](https://github.com/mplewis).
+{foss}: Find more at my [GitHub profile](https://github.com/mplewis).

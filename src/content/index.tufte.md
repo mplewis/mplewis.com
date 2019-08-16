@@ -2,7 +2,7 @@
 
 I grew up ✂ in Wausau, Wisconsin. After high school, I attended the University of Minnesota{umn} and graduated in Computer Engineering in December 2014.
 
-I currently live ✂ in Denver, CO and work at [Gusto](https://gusto.com) as a full-stack software engineer. We build payroll, HR, and benefits software for small businesses. My work is in Rails and React{js} and focuses on our core payroll product.
+I currently live ✂ in Denver, CO and work at [T-Mobile](https://t-mobile.com) as a devops engineer. We build the [TVision](https://www.t-mobile.com/tv) over-the-top cable streaming product. My work is in Kubernetes, AWS infrastructure, and Node.js microservices.
 
 # I create stuff.
 

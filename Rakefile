@@ -22,6 +22,7 @@ task :copy do
 end
 
 task :compile do
+  system('mkdir -p dist')
   system('ruby src/convert.rb dist/index.html')
   notify 'Compile'
 end

@@ -8,7 +8,7 @@ In past lives, I've built full-stack Rails payroll software at [Gusto](https://g
 
 # I create stuff.
 
-- [Frontend Doesn't Suck Anymore](/talks/fdse): It's 2017 and the web is fun again. Learn how to move out of the backend and
+- [Frontend Doesn't Suck Anymore](/talks/fdse): It's 2017 and the web is fun again. Learn how to move out of the backend and embrace the good parts of the modern browser.
 - [src2png](https://github.com/mplewis/src2png): Create beautiful, syntax-highlighted, high-resolution PNGs from your snippets of code. Great for your next software talk.
 - [whyvote.us](http://whyvote.us): Find out how much impact your presidential election vote really makes.
 - [csvtomd](https://github.com/mplewis/csvtomd): Convert your CSV files to Markdown in the terminal.

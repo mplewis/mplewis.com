@@ -2,9 +2,9 @@
 
 I grew up ✂ in Wausau, Wisconsin. After high school, I attended the University of Minnesota{umn} and graduated in Computer Engineering in December 2014.
 
-I currently live ✂ in Denver, CO and work at [T-Mobile](https://t-mobile.com) as a devops engineer. We build the [TVision](https://www.t-mobile.com/tv) over-the-top cable streaming product. My work is in Kubernetes, AWS infrastructure, and Node.js microservices.
+I currently live ✂ in Denver, CO and work at [Uplight](https://uplight.com) as a Site Reliability Engineer. My team, Orchestrated Energy, saves customers money and reduces strain on the grid by shifting schedules toward off-peak power consumption.
 
-In past lives, I've built full-stack Rails payroll software at [Gusto](https://gusto.com) and Bluetooth Low Energy-connected devices and apps at [Punch Through Design](https://punchthrough.com). Check out [my résumé (PDF)](resume.pdf) to learn more.
+In past lives, I've built full-stack Rails payroll software at [Gusto](https://gusto.com), Bluetooth Low Energy-connected devices and apps at [Punch Through Design](https://punchthrough.com), and TV streaming software at [T-Mobile](https://t-mobile.com). Check out [my résumé (PDF)](resume.pdf) to learn more.
 
 # I create stuff.
 

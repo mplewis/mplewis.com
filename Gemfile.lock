@@ -1,16 +1,17 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    rake (12.3.3)
-    redcarpet (3.5.0)
-    slim (4.0.1)
-      temple (>= 0.7.6, < 0.9)
-      tilt (>= 2.0.6, < 2.1)
-    temple (0.8.1)
-    tilt (2.0.9)
+    rake (13.0.6)
+    redcarpet (3.6.0)
+    slim (5.1.1)
+      temple (~> 0.10.0)
+      tilt (>= 2.1.0)
+    temple (0.10.3)
+    tilt (2.3.0)
 
 PLATFORMS
-  ruby
+  arm64-darwin-21
+  arm64-darwin-22
 
 DEPENDENCIES
   rake
@@ -19,4 +20,4 @@ DEPENDENCIES
   tilt
 
 BUNDLED WITH
-   1.17.2
+   2.4.20

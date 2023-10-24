@@ -9,9 +9,10 @@ Minnesota{umn} in Computer Engineering in 2014, and grew up in Wausau,
 Wisconsin.
 
 I work ✂ as an infrastructure and site reliability engineer and am currently
-available for full-time remote employment.{resume} I'm the right person to build
-your next cloud-native project and prepare your company for massive
-scale.{letstalk}
+available for full-time remote employment. I'm the right person to build your
+next cloud-native project and prepare your company for massive scale.
+[Email me](mailto:matt@mplewis.com), read my [résumé (PDF)](resume.pdf), or
+connect with me on [LinkedIn](https://linkedin.com/in/mpvlewis).
 
 In past lives, ✂ I've worked in enterprise email security at
 [Material Security](https://material.security), power conservation at
@@ -88,7 +89,3 @@ on [LinkedIn](https://linkedin.com/in/mpvlewis).
 {umn}: Go Gophers!
 
 {oss}: Find more at my [GitHub profile](https://github.com/mplewis).
-
-{resume}: My résumé is available [here (PDF)](resume.pdf).
-
-{letstalk}: Let's talk: [matt@mplewis.com](mailto:matt@mplewis.com)

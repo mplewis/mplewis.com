@@ -82,7 +82,8 @@ airplanes.
 # Let's talk.
 
 My résumé ✂ is available [here (PDF)](resume.pdf). Please feel free to contact
-me via email at [matt@mplewis.com](mailto:matt@mplewis.com)
+me via email at [matt@mplewis.com](mailto:matt@mplewis.com) or connect with me
+on [LinkedIn](https://linkedin.com/in/mpvlewis).
 
 {umn}: Go Gophers!
 

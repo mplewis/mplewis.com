@@ -8,17 +8,19 @@ Before this, I lived in Minneapolis, Minnesota, graduated from the University of
 Minnesota{umn} in Computer Engineering in 2014, and grew up in Wausau,
 Wisconsin.
 
-I work ✂ as an infrastructure and site reliability engineer and am currently
-available for full-time remote employment. I'm the right person to build your
-next cloud-native project and prepare your company for massive scale.
-[Email me](mailto:matt@mplewis.com), read my [résumé (PDF)](resume.pdf), or
-connect with me on [LinkedIn](https://linkedin.com/in/mpvlewis).
+I work ✂ as a devops, infrastructure and site reliability engineer. I'm the
+right person to build your next cloud-native project and prepare your company
+for massive scale. [Email me](mailto:matt@mplewis.com), read my
+[résumé (PDF)](resume.pdf), or connect with me on
+[LinkedIn](https://linkedin.com/in/mpvlewis).
 
-In past lives, ✂ I've worked in enterprise email security at
-[Material Security](https://material.security), power conservation at
+In past roles, ✂ I've worked in business consulting at
+[Monstera](https://monstera.dev), enterprise email security at
+[Material Security](https://material.security), power utility services at
 [Uplight](https://uplight.com), TV streaming at
-[T-Mobile](https://t-mobile.com), payroll at [Gusto](https://gusto.com), and
-Bluetooth devices and apps at [Punch Through Design](https://punchthrough.com).
+[T-Mobile](https://t-mobile.com), tax compliance at [Gusto](https://gusto.com),
+and Bluetooth devices and apps at
+[Punch Through Design](https://punchthrough.com).
 
 # I write software.
 

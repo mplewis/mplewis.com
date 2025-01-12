@@ -10,5 +10,4 @@ export default {
       bold: 700,
     },
   },
-  plugins: [require("@tailwindcss/typography")],
 };

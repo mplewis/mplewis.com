@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply font-serif font-normal text-lg bg-orange-50;
+    @apply dark:bg-zinc-900 dark:text-zinc-300;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply dark:text-white;
+  }
+
+  a {
+    @apply text-slate-800 hover:text-red-600 underline decoration-dashed hover:decoration-solid;
+    @apply dark:text-zinc-200 dark:hover:text-red-500;
+  }
+}

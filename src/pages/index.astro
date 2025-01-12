@@ -1,0 +1,65 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+
+import avatar from "../assets/avatar.jpg";
+import cats from "../assets/cats.jpg";
+---
+
+<Layout>
+  <div class="container mx-auto px-4 py-3 sm:py-8 max-w-screen-sm">
+    <main class="text-center">
+      <div class="max-w-xs mx-auto">
+        <Image
+          src={avatar}
+          width="640"
+          densities={[1, 1.5, 2]}
+          alt="Avatar of Matt Lewis"
+          class="rounded-full drop-shadow-xl"
+        />
+      </div>
+      <h1 class="text-3xl font-bold font-serif mt-6 my-4">
+        Hello!
+        <span class="font-serif font-normal">I'm Matt Lewis.</span>
+      </h1>
+      <hr class="my-8 border-slate-600 dark:border-zinc-600" />
+      <p class="my-4">
+        I love to travel for my
+        <a href="https://photolog.mplewis.com">photography</a> and
+        <a href="https://www.youtube.com/@hi8wobble">videography</a> habits.
+      </p>
+      <p class="my-4">
+        I sell
+        <a href="https://www.redbubble.com/people/mplewis/shop">stickers</a>,
+        <a href="https://photos.mplewis.com">photo prints</a>, and
+        <a href="https://corvid.design/">other small things</a>.
+      </p>
+      <p class="my-4">
+        As a software engineer, I specialize in full-stack development and cloud
+        infrastructure. I write
+        <a href="https://github.com/mplewis">open-source code</a> and
+        <a href="https://kesdev.com">blog posts</a>.
+      </p>
+      <p class="my-4">
+        I live in Colorado with my two cats, Helvetica Black and Proxima Nova.
+      </p>
+      <div class="max-w-xs mx-auto">
+        <Image
+          src={cats}
+          width="640"
+          densities={[1, 1.5, 2]}
+          alt="Painting of two black cats"
+          class="rounded-lg max-w-xs mx-auto mt-6 mb-10 drop-shadow-xl"
+        />
+      </div>
+      <hr class="my-8 border-slate-600 dark:border-zinc-600" />
+      <p class="my-4">
+        Follow me on Bluesky at
+        <a href="https://bsky.app/profile/mplewis.com">@mplewis.com</a>.
+      </p>
+      <p class="my-4">
+        Email me at <a href="mailto:matt@mplewis.com">matt@mplewis.com</a>.
+      </p>
+    </main>
+  </div>
+</Layout>
